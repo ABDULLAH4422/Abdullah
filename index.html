@@ -53,7 +53,7 @@
     building websites, or experimenting with Unreal Engine, I enjoy turning ideas
     into projects. This site serves as a record of my journey from a beginner to something useful.
 </p>
-               
+                
 
             </section>
 
@@ -161,6 +161,16 @@
                 
             </section>
 
+            <section>
+
+    <h2>Website Stats</h2>
+
+    <img
+        src="https://visitor-badge.laobi.icu/badge?page_id=abdullah4422.portfolio"
+        alt="visitor counter">
+
+</section>
+
             <footer>
 
                 <hr>
@@ -176,7 +186,15 @@
         </div>
 
     </div>
+<script>
 
+fetch('https://api.countapi.xyz/hit/abdullah4422/portfolio')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('visitor-count').innerText = data.value;
+    });
+
+</script>
 </body>
 
 </html>
