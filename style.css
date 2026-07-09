@@ -375,4 +375,44 @@ a:hover{
 }
 
 
+.typing{
+    overflow:hidden;
+    white-space:nowrap;
+    border-right:3px solid #58A6FF;
 
+    animation:
+        typing 3s steps(25),
+        blink .7s infinite;
+}
+
+@keyframes typing{
+    from{width:0}
+    to{width:100%}
+}
+
+@keyframes blink{
+    50%{
+        border-color:transparent;
+    }
+}
+
+
+.profile-image{
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
