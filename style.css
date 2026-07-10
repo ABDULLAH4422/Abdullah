@@ -471,3 +471,167 @@ section button:hover{
     margin-top: 10px;
     font-size: 14px;
 }
+
+
+/* MATRIX */
+
+body.matrix {
+
+    background: #000;
+    color: #00ff41;
+
+}
+
+body.matrix .card {
+
+    border: 1px solid #00ff41;
+
+}
+
+body.matrix h1,
+body.matrix h2 {
+
+    color: #00ff41;
+
+}
+
+
+/* CYBERPUNK */
+
+body.cyberpunk {
+
+    background: #140021;
+    color: #ff4fd8;
+
+}
+
+body.cyberpunk .card {
+
+    border: 1px solid #ff4fd8;
+
+}
+
+body.cyberpunk h1,
+body.cyberpunk h2 {
+
+    color: #00f7ff;
+
+}
+
+
+/* TERMINAL */
+
+body.terminal {
+
+    background: black;
+    color: #00ff00;
+
+    font-family: monospace;
+
+}
+
+body.terminal .card {
+
+    border: 1px solid #00ff00;
+
+}
+
+body.terminal h1,
+body.terminal h2 {
+
+    color: #00ff00;
+
+}
+
+body {
+
+    transition: 0.5s;
+
+}
+
+.card {
+
+    transition: 0.5s;
+
+}
+
+
+/* RDR2 THEME */
+
+body.rdr2 {
+
+    background: linear-gradient(
+        to bottom,
+        #3a0000,
+        #120000
+    );
+
+    color: #f5d28c;
+
+}
+
+body.rdr2 .card {
+
+    background: rgba(20, 0, 0, 0.85);
+
+    border: 2px solid #b8860b;
+
+    box-shadow: 0 0 20px rgba(184, 134, 11, 0.3);
+
+}
+
+body.rdr2 h1,
+body.rdr2 h2 {
+
+    color: #ffd700;
+
+}
+
+body.rdr2 .subtitle {
+
+    color: #d8c08a;
+
+}
+
+body.rdr2 .skill {
+
+    background: #6b0000;
+
+    color: #f5d28c;
+
+}
+
+body.rdr2 a {
+
+    color: #ffd700;
+
+}
+
+body.rdr2 a:hover {
+
+    color: #fff;
+
+}
+
+body.rdr2 .quote {
+
+    font-style: italic;
+
+    color: #d8c08a;
+
+}
+
+body.rdr2{
+
+    background:
+    linear-gradient(
+        rgba(146, 5, 5, 0.4),
+        rgba(36, 1, 1, 0.8)
+    ),
+    url("images/rdr2-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
