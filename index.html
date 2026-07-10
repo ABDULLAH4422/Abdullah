@@ -20,8 +20,10 @@
 
             <header class="hero">
 
-                <img src="images/profile.jpg" alt="Profile Picture" class="profile-image">
-
+                <img src="images/profile.jpg"
+     alt="Profile Picture"
+     class="profile-image"
+     id="profile-pic">
                 <div>
 
                     <h1>Abdullah</h1>
@@ -37,7 +39,10 @@
 <p class="quote">
     "Some work, some don't."
 </p>
-
+<p class="clicks">
+    🖱️ Image Clicks:
+    <span id="click-count">0</span>
+</p>
                 </div>
 
             </header>
@@ -287,6 +292,40 @@ function stopMusic(){
     player.currentTime = 0;
 
 }
+
+</script>
+
+<script>
+
+let clicks =
+localStorage.getItem("profileClicks") || 0;
+
+document.getElementById("click-count").innerText =
+clicks;
+
+document
+.getElementById("profile-pic")
+.addEventListener("click", () => {
+
+    clicks++;
+
+    localStorage.setItem(
+        "profileClicks",
+        clicks
+    );
+
+    document.getElementById("click-count").innerText =
+    clicks;
+
+    if(clicks === 50){
+
+        alert(
+            "🏆 Achievement Unlocked: Stop Clicking My Face"
+        );
+
+    }
+
+});
 
 </script>
 </body>

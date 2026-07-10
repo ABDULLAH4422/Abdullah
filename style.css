@@ -465,3 +465,9 @@ section button:hover{
     box-shadow:0 0 15px rgba(88,166,255,.5);
 
 }
+
+.clicks{
+    color: #58A6FF;
+    margin-top: 10px;
+    font-size: 14px;
+}
