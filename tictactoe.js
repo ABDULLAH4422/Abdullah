@@ -60,42 +60,107 @@ setTimeout(aiMove,500);
 
 function aiMove(){
 
-let empty = [];
+    let move = findBestMove("O");
 
-board.forEach((cell,index)=>{
+    if(move === -1){
 
-if(cell === "")
-empty.push(index);
+        move = findBestMove("X");
 
-});
+    }
 
-if(empty.length === 0)
-return;
+    if(move === -1 && board[4] === ""){
 
-let move =
+        move = 4;
 
-empty[
-Math.floor(
-Math.random() *
-empty.length
-)
-];
+    }
 
-board[move] = "O";
+    if(move === -1){
 
-cells[move].innerText = "O";
+        const corners = [0,2,6,8]
+        .filter(i => board[i] === "");
 
-checkGame();
+        if(corners.length){
 
-if(!gameOver){
+            move =
+            corners[
+            Math.floor(
+            Math.random() *
+            corners.length
+            )];
 
-statusText.innerText =
-"Your Turn";
+        }
+
+    }
+
+    if(move === -1){
+
+        const empty = [];
+
+        board.forEach((cell,index)=>{
+
+            if(cell === "")
+            empty.push(index);
+
+        });
+
+        move =
+        empty[
+        Math.floor(
+        Math.random() *
+        empty.length
+        )];
+
+    }
+
+    board[move] = "O";
+
+    cells[move].innerText = "O";
+
+    checkGame();
+
+    if(!gameOver){
+
+        statusText.innerText =
+        "Your Turn";
+
+    }
 
 }
 
-}
+function findBestMove(player){
 
+    for(let combo of wins){
+
+        const [a,b,c] = combo;
+
+        const line = [
+            board[a],
+            board[b],
+            board[c]
+        ];
+
+        const countPlayer =
+        line.filter(x => x === player).length;
+
+        const countEmpty =
+        line.filter(x => x === "").length;
+
+        if(
+            countPlayer === 2 &&
+            countEmpty === 1
+        ){
+
+            if(board[a] === "") return a;
+            if(board[b] === "") return b;
+            if(board[c] === "") return c;
+
+        }
+
+    }
+
+    return -1;
+
+}
 function checkGame(){
 
 for(let combo of wins){
