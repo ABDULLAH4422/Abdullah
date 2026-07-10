@@ -62,7 +62,7 @@
 
                 <ul>
                     <li>Learning DSA</li>
-                    <li>Building my Portfolio</li>
+                    <li>Trying random things</li>
                     
                     <li>Practicing Competitive Programming</li>
                     <li>Exploring Unreal Engine 5</li>
@@ -191,6 +191,37 @@
 
 
 
+<section>
+
+    <h2>🎵 Soundtrack </h2>
+
+    <p>
+        Choose a soundtrack 
+    </p>
+
+    <button onclick="playMusic('music/j&s.mp3.mp3')">
+
+        🌌 J&S
+
+    </button>
+
+    <button onclick="playMusic('music/talk.mp3')">
+
+        🎧 Talk
+
+    </button>
+
+    <button onclick="stopMusic()">
+
+        ⏹ Stop
+
+    </button>
+
+    <audio id="player" loop></audio>
+
+</section>
+
+
 
 
 
@@ -230,6 +261,32 @@ fetch('https://api.countapi.xyz/hit/abdullah4422/portfolio')
     .then(data => {
         document.getElementById('visitor-count').innerText = data.value;
     });
+
+</script>
+
+
+
+
+<script>
+
+const player =
+document.getElementById("player");
+
+function playMusic(song){
+
+    player.src = song;
+
+    player.play();
+
+}
+
+function stopMusic(){
+
+    player.pause();
+
+    player.currentTime = 0;
+
+}
 
 </script>
 </body>

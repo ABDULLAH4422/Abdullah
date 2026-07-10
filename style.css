@@ -416,3 +416,52 @@ a:hover{
     }
 
 }
+
+
+
+
+#music-btn{
+
+    padding:12px 20px;
+
+    background:#58A6FF;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+section button{
+
+    padding:10px 18px;
+
+    margin:5px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#58A6FF;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+section button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 15px rgba(88,166,255,.5);
+
+}
